@@ -16,18 +16,35 @@ struct ContentView: View {
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openWindow) private var openWindow
+
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
+        ZStack {
+            Image("SydneyRailMap")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+             VStack {
+//                Model3D(named: "Scene", bundle: realityKitContentBundle)
+//                    .padding(.bottom, 50)
+                
+                
+                Text("Hello, world!")
+                
+//                Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+//                    .toggleStyle(.button)
+//                    .padding(.top, 50)
+//                
+                Button(action: {
+                    openWindow(id: "zoom-in")
+                }, label: {
+                    Text("Zoom Into the disruption")
+                })
+            }
         }
+   //     .background(.red)
+
+  //      .background(Image("SydneyRailMap"))
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
@@ -46,6 +63,9 @@ struct ContentView: View {
                     immersiveSpaceIsShown = false
                 }
             }
+        }
+        .onAppear(){
+            openWindow(id: "cctv")
         }
     }
 }

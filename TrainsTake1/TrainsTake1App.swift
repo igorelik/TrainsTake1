@@ -12,8 +12,25 @@ struct TrainsTake1App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //    .frame(width: 1464, height: 1468)
+            //    .background(Color.red)
         }
+        .windowResizability(.contentSize)
+        .windowStyle(.plain)
 
+        WindowGroup(id: "cctv") {
+            CCTVView()
+            //    .frame(width: 1464, height: 1468)
+            //    .background(Color.red)
+        }
+        .windowResizability(.contentSize)
+   //     .windowStyle(.plain)
+
+        WindowGroup(id: "zoom-in"){
+            ZoomInView()
+                .frame(width: 1464, height: 1468)
+        }
+        .windowResizability(.contentSize)
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }.immersionStyle(selection: .constant(.full), in: .full)

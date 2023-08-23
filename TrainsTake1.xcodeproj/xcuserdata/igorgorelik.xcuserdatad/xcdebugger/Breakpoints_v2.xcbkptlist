@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6A1AFF4B-85DC-4023-8121-94A87B92D3E7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50B413B2-DBEA-4589-88C7-CBDE3D8EC907"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../TestBeacon/TestBeacon/BeaconLocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "locationManager(_:didRangeBeacons:in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50B413B2-DBEA-4589-88C7-CBDE3D8EC907 - d9b2754e8685e8fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestBeacon.BeaconLocationManager.locationManager(_: __C.CLLocationManager, didRangeBeacons: Swift.Array&lt;__C.CLBeacon&gt;, in: __C.CLBeaconRegion) -&gt; ()"
+                  moduleName = "TestBeacon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorgorelik/Work/Apple/VisionPro/TestBeacon/TestBeacon/BeaconLocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "50B413B2-DBEA-4589-88C7-CBDE3D8EC907 - d9b2754e8685e8fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestBeacon.BeaconLocationManager.locationManager(_: __C.CLLocationManager, didRangeBeacons: Swift.Array&lt;__C.CLBeacon&gt;, in: __C.CLBeaconRegion) -&gt; ()"
+                  moduleName = "TestBeacon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorgorelik/Work/Apple/VisionPro/TestBeacon/TestBeacon/BeaconLocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA087540-B1A6-43A8-B08C-364C5A5CD979"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../TestBeacon/TestBeacon/BeaconLocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "locationManager(_:didRange:satisfying:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A3AA2D8-8229-44FC-AABC-8834CFC000E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../TestBeacon/TestBeacon/BeaconLocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "locationManager(_:didRange:satisfying:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A3AA2D8-8229-44FC-AABC-8834CFC000E3 - c7e4697c1a55636b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestBeacon.BeaconLocationManager.locationManager(_: __C.CLLocationManager, didRange: Swift.Array&lt;__C.CLBeacon&gt;, satisfying: __C.CLBeaconIdentityConstraint) -&gt; ()"
+                  moduleName = "TestBeacon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorgorelik/Work/Apple/VisionPro/TestBeacon/TestBeacon/BeaconLocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "7A3AA2D8-8229-44FC-AABC-8834CFC000E3 - c7e4697c1a55636b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestBeacon.BeaconLocationManager.locationManager(_: __C.CLLocationManager, didRange: Swift.Array&lt;__C.CLBeacon&gt;, satisfying: __C.CLBeaconIdentityConstraint) -&gt; ()"
+                  moduleName = "TestBeacon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igorgorelik/Work/Apple/VisionPro/TestBeacon/TestBeacon/BeaconLocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C405288E-65B0-4C44-8A51-A06D027684CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../TestBeacon/TestBeacon/BeaconLocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "locationManager(_:didChangeAuthorization:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
