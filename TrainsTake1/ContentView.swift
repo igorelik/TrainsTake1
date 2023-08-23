@@ -34,8 +34,9 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    print("showing the video")
-                    displayVideoPlayback.toggle()
+                    Task { @MainActor in
+                        displayVideoPlayback.toggle()
+                    }
                 } label: {
                     Image("CCTV")
                         .resizable()
@@ -45,7 +46,10 @@ struct ContentView: View {
             
             if displayVideoPlayback {
                 Button {
-                    displayVideoPlayback.toggle()
+                    Task { @MainActor in
+                        player.pause()
+                        displayVideoPlayback.toggle()
+                    }
                 } label: {
                     VStack {
                         VideoPlayer(player: player)
