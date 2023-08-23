@@ -20,27 +20,36 @@ struct ContentView: View {
 
 
     var body: some View {
-        ZStack {
-            Image("SydneyRailMap")
+        HStack {
+            Button {
+                openWindow(id: "report")
+            } label: {
+                Image("SydneyRailMap")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+
+            Image("CCTV")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-             VStack {
-//                Model3D(named: "Scene", bundle: realityKitContentBundle)
-//                    .padding(.bottom, 50)
-                
-                
-                Text("Hello, world!")
-                
-//                Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-//                    .toggleStyle(.button)
-//                    .padding(.top, 50)
+
+//             VStack {
+////                Model3D(named: "Scene", bundle: realityKitContentBundle)
+////                    .padding(.bottom, 50)
 //                
-                Button(action: {
-                    openWindow(id: "zoom-in")
-                }, label: {
-                    Text("Zoom Into the disruption")
-                })
-            }
+//                
+//                Text("Hello, world!")
+//                
+////                Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+////                    .toggleStyle(.button)
+////                    .padding(.top, 50)
+////                
+//                Button(action: {
+//                    openWindow(id: "zoom-in")
+//                }, label: {
+//                    Text("Zoom Into the disruption")
+//                })
+//            }
         }
    //     .background(.red)
 
@@ -64,9 +73,9 @@ struct ContentView: View {
                 }
             }
         }
-        .onAppear(){
-            openWindow(id: "cctv")
-        }
+//        .onAppear(){
+//            openWindow(id: "cctv")
+//        }
     }
 }
 
