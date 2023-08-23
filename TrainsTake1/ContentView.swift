@@ -25,14 +25,18 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             HStack {
-                Button {
-                    openWindow(id: "report")
-                } label: {
-                    Image("SydneyRailMap")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                VStack {
+                    Button {
+                        openWindow(id: "report")
+                    } label: {
+                        Image("SydneyRailMap")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    if !displayVideoPlayback {
+                        TrainMapView()
+                    }
                 }
-                
                 Button {
                     Task { @MainActor in
                         displayVideoPlayback.toggle()

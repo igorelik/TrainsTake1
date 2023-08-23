@@ -48,6 +48,12 @@ struct TrainMapView: View {
          .onChange(of: location.stations) { oldValue, newValue in
             self.stations = newValue // Hack I know
          }
+         .task {
+             stations = location.stations
+         }
+         .navigationTitle("NSW Trains")
+         .navigationSplitViewColumnWidth(250)
+
       } detail: {
          Map(position: $camera) {
             
@@ -55,10 +61,10 @@ struct TrainMapView: View {
         
             .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: [.publicTransport], showsTraffic: true))
       }
-      
+
       
    }
-   
+        
    
 }
 
