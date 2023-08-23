@@ -33,9 +33,9 @@ struct ContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }
-                    if !displayVideoPlayback {
-                        TrainMapView()
-                    }
+//                    if !displayVideoPlayback {
+//                        TrainMapView()
+//                    }
                 }
                 Button {
                     Task { @MainActor in
@@ -46,6 +46,9 @@ struct ContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
+            }
+            .task {
+                openWindow(id: "trainMap")
             }
             
             if displayVideoPlayback {
