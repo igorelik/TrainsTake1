@@ -33,22 +33,22 @@ struct ContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }
-//                    if !displayVideoPlayback {
-//                        TrainMapView()
+                    .buttonStyle(.plain)
+                }
+//                Button {
+//                    Task { @MainActor in
+//                        // displayVideoPlayback.toggle()
 //                    }
-                }
-                Button {
-                    Task { @MainActor in
-                        displayVideoPlayback.toggle()
-                    }
-                } label: {
-                    Image("CCTV")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
-            }
+//                } label: {
+//                    Image("CCTV")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                }
+//                .buttonStyle(.plain)
+         }
             .task {
                 openWindow(id: "trainMap")
+                openWindow(id: "cctv")
             }
             
             if displayVideoPlayback {
@@ -72,7 +72,8 @@ struct ContentView: View {
                             .padding(50)
                     }
                 }
-            }
+                .buttonStyle(.plain)
+          }
         }
     }
 }

@@ -16,23 +16,27 @@ struct TrainsTake1App: App {
         .windowResizability(.contentSize)
         .windowStyle(.plain)
 
+        WindowGroup(id: "cctv") {
+            CCTVView()
+         }
+        .windowResizability(.contentSize)
+        //.defaultSize(width: 1.5, height: 2.5, depth: 0.6, in: .meters)
+
         WindowGroup(id: "report") {
             ReportView()
          }
         .windowResizability(.contentSize)
  
-        WindowGroup(id: "zoom-in"){
-            ZoomInView()
-                .frame(width: 1464, height: 1468)
-        }
-        .windowResizability(.contentSize)
-        
         WindowGroup(id: "trainMap") {
             TrainMapView()
         }
-        
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
-        }.immersionStyle(selection: .constant(.full), in: .full)
+        .windowResizability(.contentSize)
+
+		WindowGroup(id: "face-time") {
+			FacetimeCallView()
+		}
+        .windowResizability(.contentSize)
+        .windowStyle(.volumetric)
+        .defaultSize(width: 0.6, height: 0.6, depth: 0.6, in: .meters)
     }
 }

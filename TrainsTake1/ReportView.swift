@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ReportView: View {
+	@Environment(\.openWindow) private var openWindow
     var body: some View {
         ZStack{
             Image("Report")
@@ -10,7 +11,9 @@ struct ReportView: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Button(action: {}){
+                    Button(action: {
+						openWindow(id: "face-time")
+					}){
                         Text("Call Police")
                             .padding(.horizontal, 80)
                     }
