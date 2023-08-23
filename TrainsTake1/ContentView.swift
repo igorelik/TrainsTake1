@@ -8,6 +8,7 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
+import AVKit
 
 struct ContentView: View {
 
@@ -17,65 +18,51 @@ struct ContentView: View {
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     @Environment(\.openWindow) private var openWindow
-
+    
+    @State var displayVideoPlayback = false
+    @State var player =  AVPlayer()
 
     var body: some View {
-        HStack {
-            Button {
-                openWindow(id: "report")
-            } label: {
-                Image("SydneyRailMap")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+        ZStack {
+            HStack {
+                Button {
+                    openWindow(id: "report")
+                } label: {
+                    Image("SydneyRailMap")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                
+                Button {
+                    print("showing the video")
+                    displayVideoPlayback.toggle()
+                } label: {
+                    Image("CCTV")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
             }
-
-            Image("CCTV")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-
-//             VStack {
-////                Model3D(named: "Scene", bundle: realityKitContentBundle)
-////                    .padding(.bottom, 50)
-//                
-//                
-//                Text("Hello, world!")
-//                
-////                Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-////                    .toggleStyle(.button)
-////                    .padding(.top, 50)
-////                
-//                Button(action: {
-//                    openWindow(id: "zoom-in")
-//                }, label: {
-//                    Text("Zoom Into the disruption")
-//                })
-//            }
-        }
-   //     .background(.red)
-
-  //      .background(Image("SydneyRailMap"))
-        .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
+            
+            if displayVideoPlayback {
+                Button {
+                    displayVideoPlayback.toggle()
+                } label: {
+                    VStack {
+                        VideoPlayer(player: player)
+                            .onAppear{
+                                if player.currentItem == nil {
+                                            let item = AVPlayerItem(url: Bundle.main.url(forResource: "cctvFeed", withExtension: "mp4")!)
+                                            player.replaceCurrentItem(with: item)
+                                        }
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                                            player.play()
+                                        })
+                            }
+                            .padding(50)
                     }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
                 }
             }
         }
-//        .onAppear(){
-//            openWindow(id: "cctv")
-//        }
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4207BC6B2A95B566006B7F52 /* CCTVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207BC6A2A95B566006B7F52 /* CCTVView.swift */; };
 		4207BC6D2A95BDCE006B7F52 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207BC6C2A95BDCE006B7F52 /* ReportView.swift */; };
+		4207BC6F2A95C660006B7F52 /* cctvFeed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4207BC6E2A95C5E9006B7F52 /* cctvFeed.mp4 */; };
 		42A082762A94DF4100D1B3BA /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 42A082752A94DF4100D1B3BA /* RealityKitContent */; };
 		42A082782A94DF4100D1B3BA /* TrainsTake1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A082772A94DF4100D1B3BA /* TrainsTake1App.swift */; };
 		42A0827A2A94DF4100D1B3BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A082792A94DF4100D1B3BA /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		4207BC6A2A95B566006B7F52 /* CCTVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTVView.swift; sourceTree = "<group>"; };
 		4207BC6C2A95BDCE006B7F52 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		4207BC6E2A95C5E9006B7F52 /* cctvFeed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cctvFeed.mp4; sourceTree = "<group>"; };
 		42A082702A94DF4100D1B3BA /* TrainsTake1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainsTake1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A082742A94DF4100D1B3BA /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		42A082772A94DF4100D1B3BA /* TrainsTake1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainsTake1App.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				42A082892A94E5F900D1B3BA /* ZoomInView.swift */,
 				4207BC6A2A95B566006B7F52 /* CCTVView.swift */,
 				4207BC6C2A95BDCE006B7F52 /* ReportView.swift */,
+				4207BC6E2A95C5E9006B7F52 /* cctvFeed.mp4 */,
 			);
 			path = TrainsTake1;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				42A082802A94DF4300D1B3BA /* Assets.xcassets in Resources */,
 				42A082832A94DF4300D1B3BA /* Preview Assets.xcassets in Resources */,
 				42A0827E2A94DF4100D1B3BA /* ImageBasedLighting.skybox in Resources */,
+				4207BC6F2A95C660006B7F52 /* cctvFeed.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
