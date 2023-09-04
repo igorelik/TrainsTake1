@@ -29,7 +29,7 @@ struct TrainMapView: View {
          .searchable(text: $searchString, prompt: "NSW Train Station")
          .onChange(of: selection) { oldValue, newValue in
             withAnimation {
-                if (newValue?.location.coordinate) != nil {
+               if let newLocation = newValue?.location.coordinate {
                   self.camera = .camera(.init(centerCoordinate: newValue!.location.coordinate, distance: 600))
                }
             }

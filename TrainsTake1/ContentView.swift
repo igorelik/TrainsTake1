@@ -26,10 +26,30 @@ struct ContentView: View {
         ZStack {
             HStack {
                 VStack {
+//                    Button {
+//                        openWindow(id: "report")
+//                    } label: {
+//                        Image("SydneyRailMap")
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                    }
+//                    .buttonStyle(.plain)
                     Button {
                         openWindow(id: "report")
                     } label: {
-                        Image("SydneyRailMap")
+                        Image("rail_map")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.bottom, 20)
+                    
+                    Button {
+                        Task { @MainActor in
+                            displayVideoPlayback.toggle()
+                        }
+                    } label: {
+                        Image("CCTV")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }
@@ -37,18 +57,16 @@ struct ContentView: View {
                 }
 //                Button {
 //                    Task { @MainActor in
-//                        // displayVideoPlayback.toggle()
+//                        displayVideoPlayback.toggle()
 //                    }
 //                } label: {
 //                    Image("CCTV")
 //                        .resizable()
 //                        .aspectRatio(contentMode: .fit)
 //                }
-//                .buttonStyle(.plain)
-         }
+            }
             .task {
                 openWindow(id: "trainMap")
-                openWindow(id: "cctv")
             }
             
             if displayVideoPlayback {
@@ -59,13 +77,15 @@ struct ContentView: View {
                     }
                 } label: {
                     VStack {
-                        VideoPlayer(player: player)
+                        LegacyVideoPlayer(player: player)
+//                            .frame(maxWidth: 783)
                             .onAppear{
                                 if player.currentItem == nil {
                                             let item = AVPlayerItem(url: Bundle.main.url(forResource: "cctvFeed", withExtension: "mp4")!)
                                             player.replaceCurrentItem(with: item)
                                         }
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                                            player.seek(to: CMTime(value:6, timescale: 1))
                                             player.play()
                                         })
                             }
@@ -73,7 +93,7 @@ struct ContentView: View {
                     }
                 }
                 .buttonStyle(.plain)
-          }
+            }
         }
     }
 }
