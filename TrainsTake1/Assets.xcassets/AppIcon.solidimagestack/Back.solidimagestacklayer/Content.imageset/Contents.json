@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Back.png",
       "idiom" : "reality",
       "scale" : "2x"
     }
